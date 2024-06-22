@@ -63,7 +63,7 @@ $(document).ready(function () {
   $("#infoForm").submit(function (event) {
     event.preventDefault(); // Prevent default form submission
     $.ajax({
-      url: "FAQS.php",
+      url: "index.php",
       type: "POST",
       data: $(this).serialize() + "&action=Submit Info",
       success: function (response) {
@@ -77,7 +77,7 @@ $(document).ready(function () {
   $("#emailForm").submit(function (event) {
     event.preventDefault(); // Prevent default form submission
     $.ajax({
-      url: "FAQS.php",
+      url: "index.php",
       type: "POST",
       data: $(this).serialize() + "&action=Submit Email",
       success: function (response) {
