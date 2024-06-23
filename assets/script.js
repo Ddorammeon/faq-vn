@@ -5,7 +5,7 @@ const dropdowns = document.querySelectorAll(".faq");
 dropdowns.forEach((faq) => {
   //get inner element from each dropdown
   const accordion = faq.querySelector(".accordion");
-  const fag__icon = faq.querySelector(".fag__icon");
+  const fag__icon = faq.querySelector(".faq__icon");
   const pannel = faq.querySelector(".pannel");
   const options = faq.querySelectorAll(".pannel p");
 
@@ -14,21 +14,23 @@ dropdowns.forEach((faq) => {
     //add the clicked select styles to the selected element
     accordion.classList.toggle("accordion-clicked");
     //add the clicked select styles to the selected element
-    fag__icon.classList.toggle("fag__icon--rotate");
+    fag__icon.classList.toggle("faq__icon--rotate");
     //add the clicked select styles to the selected element
     pannel.classList.toggle("pannel-open");
   });
 });
 
 //ques sidebar focus
-const sidebar = document.querySelectorAll(".ques-item");
-sidebar.forEach((quesItem) => {
-  const sideitem = quesItem.querySelector(".ques-item a");
+function changeColor(selectedElement) {
+  // Lấy tất cả các phần tử dòng text
+  const items = document.querySelectorAll(".ques-item a");
 
-  sideitem.addEventListener("click", () =>
-    sideitem.classList.toggle("ques-item__active")
-  );
-});
+  // Xóa lớp 'red' khỏi tất cả các phần tử
+  items.forEach((item) => item.classList.remove("ques-item__active"));
+
+  // Thêm lớp 'red' vào phần tử đã chọn
+  selectedElement.classList.add("ques-item__active");
+}
 
 //more dropdown on mobile
 const mainques = document.querySelectorAll(".main-ques__content");

@@ -255,7 +255,10 @@ a {
 
 .faq__icon--rotate {
     transform: rotate(180deg);
-    color: #C31414;
+}
+
+.faq__icon--rotate path {
+    fill: #C31414;
 }
 
 .accordion-clicked .faq__heading {
