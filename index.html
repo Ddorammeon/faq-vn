@@ -183,10 +183,39 @@ if ($_POST) {
               </p>
             </div>
           </div>
-          <div class="language--block">
-            <img src="./assets/img/flag.png" alt="" />
-            <p class="language">Tiếng Việt</p>
-            <!--<img src="./assets/img/arrow-down.svg" alt=""/>-->
+          <div class="dropdown">
+            <div class="language--block">
+              <img src="./assets/img/flag.png" alt="" class="selectedImg" />
+              <p class="select">Tiếng Việt</p>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.4713 5.52859C12.7317 5.78894 12.7317 6.21105 12.4713 6.4714L8.47132 10.4714C8.21097 10.7317 7.78886 10.7317 7.52851 10.4714L3.52851 6.4714C3.26816 6.21105 3.26816 5.78894 3.52851 5.52859C3.78886 5.26824 4.21097 5.26824 4.47132 5.52859L7.99992 9.05719L11.5285 5.52859C11.7889 5.26824 12.211 5.26824 12.4713 5.52859Z"
+                  fill="#7F7F7F"
+                />
+              </svg>
+            </div>
+
+            <div class="dropdown--list">
+              <a href="" class="dropdown--item dropdown--item__active">
+                <img src="./assets/img/flag.png" alt="" class="language__img" />
+                <p class="language">Tiếng Việt</p>
+              </a>
+              <a
+                href="https://ddorammeon.github.io/jp-test/"
+                class="dropdown--item"
+              >
+                <img src="./assets/img/flag.png" alt="" class="language__img" />
+                <p class="language">Japanese</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -202,36 +231,36 @@ if ($_POST) {
           <h1 class="main-heading">Câu hỏi thường gặp</h1>
           <div class="question">
             <div class="ques-sidebar hide-on-mobile">
-              <h2 class="ques-sidebar__heading">Danh sách câu hỏi</h2>
+              <h2 class="ques-sidebar__heading">Nhóm câu hỏi</h2>
               <ul class="ques-list">
                 <li class="ques-item">
                   <a
                     href="#conditional"
                     class="ques-item__active"
                     onclick="changeColor(this)"
-                    >1. Điều kiện tuyển sinh</a
+                    >1. Tuyển sinh</a
                   >
                 </li>
                 <li class="ques-item">
                   <a href="#information" onclick="changeColor(this)"
-                    >2. Thông tin chương trình</a
+                    >2. Bằng cấp - Chương trình đào tạo</a
                   >
                 </li>
                 <li class="ques-item">
                   <a href="#training" onclick="changeColor(this)"
-                    >3. Chương trình đào tạo</a
+                    >3. Đặc điểm - Lợi thế chương trình</a
                   >
                 </li>
                 <li class="ques-item">
                   <a href="#quality" onclick="changeColor(this)"
-                    >4. Chất lượng đầu ra</a
+                    >4. Cơ hội việc làm</a
                   >
                 </li>
-                <li class="ques-item">
+                <!-- <li class="ques-item">
                   <a href="#search" onclick="changeColor(this)"
                     >5. Tra cứu thông tin</a
                   >
-                </li>
+                </li>  -->
               </ul>
             </div>
 
@@ -240,7 +269,7 @@ if ($_POST) {
                 <div class="main-ques__content" id="conditional">
                   <div class="ques__heading--block">
                     <h2 class="main-ques__heading main-ques__heading--active">
-                      1. Điều kiện tuyển sinh
+                      1. Tuyển sinh
                     </h2>
                   </div>
                   <div class="faq--block faq--block--active">
@@ -249,8 +278,8 @@ if ($_POST) {
                         <div class="faq__heading">
                           <h3>1.1</h3>
                           <h3>
-                            Học sinh tham gia xét tuyển Chương trình cần đáp ứng
-                            điều kiện gì?
+                            Chương trình xét tuyển theo phương thức tuyển sinh
+                            nào?
                           </h3>
                         </div>
 
@@ -278,7 +307,7 @@ if ($_POST) {
                           Lý, Hóa (A00 - khối A); hoặc Toán, Lý, Anh
                           <br class="hide-on-mobile" />
                           (A01 - khối A1) hoặc các phương án xét tuyển riêng của
-                          Học viện
+                          Học viện.
                         </p>
                       </div>
                     </div>
@@ -287,10 +316,7 @@ if ($_POST) {
                       <div class="accordion">
                         <div class="faq__heading">
                           <h3>1.2</h3>
-                          <h3>
-                            Học sinh tham gia xét tuyển Chương trình cần đáp ứng
-                            điều kiện gì?
-                          </h3>
+                          <h3>Chỉ tiêu tuyển sinh 2024</h3>
                         </div>
                         <svg
                           class="faq__icon"
@@ -308,15 +334,8 @@ if ($_POST) {
                       </div>
                       <div class="pannel">
                         <p>
-                          Các thí sinh cần tốt nghiệp THPT hoặc tương đương,
-                          tham dự và trúng tuyển trong kỳ tuyển<br
-                            class="hide-on-mobile"
-                          />
-                          sinh đại học hệ chính quy với Tổ hợp xét tuyển: Toán,
-                          Lý, Hóa (A00 - khối A); hoặc Toán, Lý, Anh
-                          <br class="hide-on-mobile" />
-                          (A01 - khối A1) hoặc các phương án xét tuyển riêng của
-                          Học viện
+                          Chỉ tiêu tuyển sinh chương trình năm 2024 là 100 chỉ
+                          tiêu.<br class="hide-on-mobile" />
                         </p>
                       </div>
                     </div>
@@ -325,10 +344,7 @@ if ($_POST) {
                       <div class="accordion">
                         <div class="faq__heading">
                           <h3>1.3</h3>
-                          <h3>
-                            Học sinh tham gia xét tuyển Chương trình cần đáp ứng
-                            điều kiện gì?
-                          </h3>
+                          <h3>Chương trình tuyển sinh những khối nào?</h3>
                         </div>
                         <svg
                           class="faq__icon"
@@ -346,26 +362,18 @@ if ($_POST) {
                       </div>
                       <div class="pannel">
                         <p>
-                          Các thí sinh cần tốt nghiệp THPT hoặc tương đương,
-                          tham dự và trúng tuyển trong kỳ tuyển<br
-                            class="hide-on-mobile"
-                          />
-                          sinh đại học hệ chính quy với Tổ hợp xét tuyển: Toán,
-                          Lý, Hóa (A00 - khối A); hoặc Toán, Lý, Anh
-                          <br class="hide-on-mobile" />
-                          (A01 - khối A1) hoặc các phương án xét tuyển riêng của
-                          Học viện
+                          Chương trình xét tuyển khối A00 (Toán, Lý, Hóa) hoặc
+                          A01 (Toán, Lý, Anh).<br class="hide-on-mobile" />
                         </p>
                       </div>
                     </div>
-
+                    <!-- 
                     <div class="faq">
                       <div class="accordion">
                         <div class="faq__heading">
                           <h3>1.4</h3>
                           <h3>
-                            Học sinh tham gia xét tuyển Chương trình cần đáp ứng
-                            điều kiện gì?
+                            
                           </h3>
                         </div>
                         <svg
@@ -471,14 +479,14 @@ if ($_POST) {
                           Học viện
                         </p>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
 
                 <div class="main-ques__content" id="information">
                   <div class="ques__heading--block">
                     <h2 class="main-ques__heading">
-                      2. Thông tin chương trình
+                      2. Bằng cấp - Chương trình đào tạo
                     </h2>
                   </div>
                   <div class="faq--block">
@@ -486,10 +494,7 @@ if ($_POST) {
                       <div class="accordion accordion-clicked">
                         <div class="faq__heading">
                           <h3>2.1</h3>
-                          <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
-                          </h3>
+                          <h3>Thời gian đào tạo của chương trình</h3>
                         </div>
 
                         <svg
@@ -508,16 +513,8 @@ if ($_POST) {
                       </div>
                       <div class="pannel pannel-open">
                         <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
+                          Thời gian đào tạo của chương trình Kỹ sư CNTT Việt
+                          Nhật là 4,5 năm.
                         </p>
                       </div>
                     </div>
@@ -527,8 +524,7 @@ if ($_POST) {
                         <div class="faq__heading">
                           <h3>2.2</h3>
                           <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
+                            Sinh viên sẽ được đào tạo tiếng Nhật ở mức nào?
                           </h3>
                         </div>
                         <svg
@@ -547,16 +543,8 @@ if ($_POST) {
                       </div>
                       <div class="pannel">
                         <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
+                          Sau khi tốt nghiệp , SV sẽ đạt trình độ tiếng Nhật N3
+                          JLPT.
                         </p>
                       </div>
                     </div>
@@ -565,10 +553,7 @@ if ($_POST) {
                       <div class="accordion">
                         <div class="faq__heading">
                           <h3>2.3</h3>
-                          <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
-                          </h3>
+                          <h3>Sinh viên tốt nghiệp sẽ nhận bằng gì?</h3>
                         </div>
                         <svg
                           class="faq__icon"
@@ -586,16 +571,8 @@ if ($_POST) {
                       </div>
                       <div class="pannel">
                         <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
+                          Sinh viên tốt nghiệp nhận bằng Kỹ sư CNTT Việt Nhật do
+                          PTIT cấp.
                         </p>
                       </div>
                     </div>
@@ -604,10 +581,7 @@ if ($_POST) {
                       <div class="accordion">
                         <div class="faq__heading">
                           <h3>2.4</h3>
-                          <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
-                          </h3>
+                          <h3>Sinh viên sẽ học tại Việt Nam hay Nhật Bản?</h3>
                         </div>
                         <svg
                           class="faq__icon"
@@ -625,94 +599,10 @@ if ($_POST) {
                       </div>
                       <div class="pannel">
                         <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="faq">
-                      <div class="accordion">
-                        <div class="faq__heading">
-                          <h3>2.5</h3>
-                          <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
-                          </h3>
-                        </div>
-                        <svg
-                          class="faq__icon"
-                          width="20"
-                          height="21"
-                          viewBox="0 0 20 21"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 0.75C8.07164 0.75 6.18657 1.32183 4.58319 2.39317C2.97982 3.46451 1.73013 4.98726 0.992179 6.76884C0.254225 8.55042 0.061142 10.5108 0.437348 12.4021C0.813554 14.2934 1.74215 16.0307 3.10571 17.3943C4.46928 18.7579 6.20656 19.6865 8.09787 20.0627C9.98919 20.4389 11.9496 20.2458 13.7312 19.5078C15.5127 18.7699 17.0355 17.5202 18.1068 15.9168C19.1782 14.3134 19.75 12.4284 19.75 10.5C19.7473 7.91498 18.7192 5.43661 16.8913 3.60872C15.0634 1.78084 12.585 0.75273 10 0.75ZM14.2806 9.53063L10.5306 13.2806C10.461 13.3504 10.3783 13.4057 10.2872 13.4434C10.1962 13.4812 10.0986 13.5006 10 13.5006C9.90144 13.5006 9.80385 13.4812 9.7128 13.4434C9.62175 13.4057 9.53903 13.3504 9.46938 13.2806L5.71938 9.53063C5.57865 9.38989 5.49959 9.19902 5.49959 9C5.49959 8.80098 5.57865 8.61011 5.71938 8.46937C5.86011 8.32864 6.05098 8.24958 6.25 8.24958C6.44903 8.24958 6.6399 8.32864 6.78063 8.46937L10 11.6897L13.2194 8.46937C13.2891 8.39969 13.3718 8.34442 13.4628 8.3067C13.5539 8.26899 13.6515 8.24958 13.75 8.24958C13.8486 8.24958 13.9461 8.26899 14.0372 8.3067C14.1282 8.34442 14.2109 8.39969 14.2806 8.46937C14.3503 8.53906 14.4056 8.62178 14.4433 8.71283C14.481 8.80387 14.5004 8.90145 14.5004 9C14.5004 9.09855 14.481 9.19613 14.4433 9.28717C14.4056 9.37822 14.3503 9.46094 14.2806 9.53063Z"
-                            fill="#9F9F9F"
-                          />
-                        </svg>
-                      </div>
-                      <div class="pannel">
-                        <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="faq">
-                      <div class="accordion">
-                        <div class="faq__heading">
-                          <h3>2.6</h3>
-                          <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
-                          </h3>
-                        </div>
-                        <svg
-                          class="faq__icon"
-                          width="20"
-                          height="21"
-                          viewBox="0 0 20 21"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10 0.75C8.07164 0.75 6.18657 1.32183 4.58319 2.39317C2.97982 3.46451 1.73013 4.98726 0.992179 6.76884C0.254225 8.55042 0.061142 10.5108 0.437348 12.4021C0.813554 14.2934 1.74215 16.0307 3.10571 17.3943C4.46928 18.7579 6.20656 19.6865 8.09787 20.0627C9.98919 20.4389 11.9496 20.2458 13.7312 19.5078C15.5127 18.7699 17.0355 17.5202 18.1068 15.9168C19.1782 14.3134 19.75 12.4284 19.75 10.5C19.7473 7.91498 18.7192 5.43661 16.8913 3.60872C15.0634 1.78084 12.585 0.75273 10 0.75ZM14.2806 9.53063L10.5306 13.2806C10.461 13.3504 10.3783 13.4057 10.2872 13.4434C10.1962 13.4812 10.0986 13.5006 10 13.5006C9.90144 13.5006 9.80385 13.4812 9.7128 13.4434C9.62175 13.4057 9.53903 13.3504 9.46938 13.2806L5.71938 9.53063C5.57865 9.38989 5.49959 9.19902 5.49959 9C5.49959 8.80098 5.57865 8.61011 5.71938 8.46937C5.86011 8.32864 6.05098 8.24958 6.25 8.24958C6.44903 8.24958 6.6399 8.32864 6.78063 8.46937L10 11.6897L13.2194 8.46937C13.2891 8.39969 13.3718 8.34442 13.4628 8.3067C13.5539 8.26899 13.6515 8.24958 13.75 8.24958C13.8486 8.24958 13.9461 8.26899 14.0372 8.3067C14.1282 8.34442 14.2109 8.39969 14.2806 8.46937C14.3503 8.53906 14.4056 8.62178 14.4433 8.71283C14.481 8.80387 14.5004 8.90145 14.5004 9C14.5004 9.09855 14.481 9.19613 14.4433 9.28717C14.4056 9.37822 14.3503 9.46094 14.2806 9.53063Z"
-                            fill="#9F9F9F"
-                          />
-                        </svg>
-                      </div>
-                      <div class="pannel">
-                        <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
+                          Sinh viên sẽ được đào tạo tại Học viện ở Việt Nam với
+                          thời gian 4.5 năm. Chương trình có các cơ hội thực tập
+                          và làm việc thực tế tại các doanh nghiệp và trường đại
+                          học Nhật Bản.
                         </p>
                       </div>
                     </div>
@@ -721,17 +611,16 @@ if ($_POST) {
 
                 <div class="main-ques__content" id="training">
                   <div class="ques__heading--block">
-                    <h2 class="main-ques__heading">3. Chương trình đào tạo</h2>
+                    <h2 class="main-ques__heading">
+                      3. Đặc điểm - Lợi thế chương trình
+                    </h2>
                   </div>
                   <div class="faq--block">
                     <div class="faq">
                       <div class="accordion accordion-clicked">
                         <div class="faq__heading">
-                          <h3>2.1</h3>
-                          <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
-                          </h3>
+                          <h3>3.1</h3>
+                          <h3>Chương trình đào tạo có gì nổi bật?</h3>
                         </div>
 
                         <svg
@@ -750,34 +639,29 @@ if ($_POST) {
                       </div>
                       <div class="pannel pannel-open">
                         <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
+                          Sinh viên tốt nghiệp sẽ có năng lực vượt qua các kỳ
+                          thi chứng chỉ IT Passport và IT FE<br />
+                          Đây là 2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ
+                          thông tin (CNTT) của Nhật Bản<br />
+                          Sở hữu chứng chỉ này sẽ có rất nhiều ưu điểm giúp cho
+                          SV có thể cộng điểm khi ứng
+                          <br />
+                          tuyển vào các công ty CNTT,đặc biệt là các công ty
+                          CNTT của Nhật, hay cộng điểm <br />
+                          khi xin visa Kodo/ visa vĩnh trú tại Nhật.
                         </p>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="main-ques__content" id="quality">
-                  <div class="ques__heading--block">
-                    <h2 class="main-ques__heading">4. Chất lượng đầu ra</h2>
-                  </div>
                   <div class="faq--block">
                     <div class="faq">
                       <div class="accordion accordion-clicked">
                         <div class="faq__heading">
-                          <h3>2.1</h3>
+                          <h3>3.2</h3>
                           <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
+                            Cơ hội tiếp cận với thị trường, doanh nghiệp Nhật
+                            Bản như thế nào?
                           </h3>
                         </div>
 
@@ -797,35 +681,25 @@ if ($_POST) {
                       </div>
                       <div class="pannel pannel-open">
                         <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
+                          Sinh viên sẽ có cơ hội tham gia chuỗi Workshop cùng
+                          các chuyên gia công nghệ
+                          <br />
+                          hàng đầu tại các doanh nghiệp Nhật Bản. Ngoài ra, sinh
+                          viên có thể chuyển tiếp sang <br />
+                          học tập tại các trường đối tác của Học viện nếu đáp
+                          ứng được yêu cầu đưa ra từ <br />
+                          phía các đơn vị.
                         </p>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="main-ques__content" id="search">
-                  <div class="ques__heading--block">
-                    <h2 class="main-ques__heading">5. Tra cứu thông tin</h2>
-                  </div>
                   <div class="faq--block">
                     <div class="faq">
                       <div class="accordion accordion-clicked">
                         <div class="faq__heading">
-                          <h3>2.1</h3>
-                          <h3>
-                            Điểm khác biệt của Chương trình CNTT Việt Nhật với
-                            các Chương trình CNTT LKĐT Quốc tế khác là gì?
-                          </h3>
+                          <h3>3.3</h3>
+                          <h3>Các hoạt động ngoại khoá của chương trình</h3>
                         </div>
 
                         <svg
@@ -844,17 +718,130 @@ if ($_POST) {
                       </div>
                       <div class="pannel pannel-open">
                         <p>
-                          Chương trình đào tạo Công nghệ thông tin Việt Nhật có
-                          định hướng về thị trường Nhật Bản. Kiến thức và năng
-                          lực chuyên môn của sinh viên sẽ đáp ứng chuẩn, vượt
-                          qua các kỳ thi chứng chỉ IT Passport và IT FE. Đây là
-                          2 chứng chỉ đạt chuẩn cơ bản kỹ sư Công nghệ thông tin
-                          (CNTT) của Nhật Bản. Bên cạnh đó, sinh viên sẽ được
-                          đào tạo 2 ngoại ngữ là Tiếng Anh và Tiếng Nhật. Sinh
-                          viên ra trường sẽ có khả năng Tiếng Nhật tương đương
-                          Trình độ tiếng Nhật N3 JLPT và đạt trình độ tương
-                          đương chuẩn kỹ sư CNTT Nhật Bản ITSS.
+                          Sinh viên sẽ được tham gia các hoạt động ngoại khoá
+                          hàng năm, đặc biệt là các hoạt
+                          <br />
+                          động trao đổi văn hoá tại Nhật Bản. Bên cạnh đó, sinh
+                          viên cũng có cơ hội thực tập <br />
+                          làm việc thực tế tại các doanh nghiệp và trường đại
+                          học Nhật Bản.
                         </p>
+                      </div>
+                    </div>
+
+                    <div class="faq--block">
+                      <div class="faq">
+                        <div class="accordion accordion-clicked">
+                          <div class="faq__heading">
+                            <h3>3.4</h3>
+                            <h3>
+                              Cơ hội thực tập tại các doanh nghiệp như thế nào?
+                            </h3>
+                          </div>
+
+                          <svg
+                            class="faq__icon faq__icon--rotate"
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0.75C8.07164 0.75 6.18657 1.32183 4.58319 2.39317C2.97982 3.46451 1.73013 4.98726 0.992179 6.76884C0.254225 8.55042 0.061142 10.5108 0.437348 12.4021C0.813554 14.2934 1.74215 16.0307 3.10571 17.3943C4.46928 18.7579 6.20656 19.6865 8.09787 20.0627C9.98919 20.4389 11.9496 20.2458 13.7312 19.5078C15.5127 18.7699 17.0355 17.5202 18.1068 15.9168C19.1782 14.3134 19.75 12.4284 19.75 10.5C19.7473 7.91498 18.7192 5.43661 16.8913 3.60872C15.0634 1.78084 12.585 0.75273 10 0.75ZM14.2806 9.53063L10.5306 13.2806C10.461 13.3504 10.3783 13.4057 10.2872 13.4434C10.1962 13.4812 10.0986 13.5006 10 13.5006C9.90144 13.5006 9.80385 13.4812 9.7128 13.4434C9.62175 13.4057 9.53903 13.3504 9.46938 13.2806L5.71938 9.53063C5.57865 9.38989 5.49959 9.19902 5.49959 9C5.49959 8.80098 5.57865 8.61011 5.71938 8.46937C5.86011 8.32864 6.05098 8.24958 6.25 8.24958C6.44903 8.24958 6.6399 8.32864 6.78063 8.46937L10 11.6897L13.2194 8.46937C13.2891 8.39969 13.3718 8.34442 13.4628 8.3067C13.5539 8.26899 13.6515 8.24958 13.75 8.24958C13.8486 8.24958 13.9461 8.26899 14.0372 8.3067C14.1282 8.34442 14.2109 8.39969 14.2806 8.46937C14.3503 8.53906 14.4056 8.62178 14.4433 8.71283C14.481 8.80387 14.5004 8.90145 14.5004 9C14.5004 9.09855 14.481 9.19613 14.4433 9.28717C14.4056 9.37822 14.3503 9.46094 14.2806 9.53063Z"
+                              fill="#9F9F9F"
+                            />
+                          </svg>
+                        </div>
+                        <div class="pannel pannel-open">
+                          <p>
+                            Chương trình sẽ đào tạo thực tế với học kỳ doanh
+                            nghiệp Nhật tại Việt Nam và Nhật Bản.
+                            <br />Các doanh nghiệp sẽ đồng hành cùng các bạn SV
+                            để làm các project, sản phẩm thực tế <br />giúp cho
+                            các bạn SV có thể làm quen với môi trường doanh
+                            nghiệp đồng thời có các sản phẩm <br />
+                            riêng biệt để làm tốt cho CV của mình về sau.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="main-ques__content" id="quality">
+                    <div class="ques__heading--block">
+                      <h2 class="main-ques__heading">4. Cơ hội việc làm</h2>
+                    </div>
+                    <div class="faq--block">
+                      <div class="faq">
+                        <div class="accordion accordion-clicked">
+                          <div class="faq__heading">
+                            <h3>4.1</h3>
+                            <h3>Vị trí công việc đảm nhận sau tốt nghiệp</h3>
+                          </div>
+
+                          <svg
+                            class="faq__icon faq__icon--rotate"
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10 0.75C8.07164 0.75 6.18657 1.32183 4.58319 2.39317C2.97982 3.46451 1.73013 4.98726 0.992179 6.76884C0.254225 8.55042 0.061142 10.5108 0.437348 12.4021C0.813554 14.2934 1.74215 16.0307 3.10571 17.3943C4.46928 18.7579 6.20656 19.6865 8.09787 20.0627C9.98919 20.4389 11.9496 20.2458 13.7312 19.5078C15.5127 18.7699 17.0355 17.5202 18.1068 15.9168C19.1782 14.3134 19.75 12.4284 19.75 10.5C19.7473 7.91498 18.7192 5.43661 16.8913 3.60872C15.0634 1.78084 12.585 0.75273 10 0.75ZM14.2806 9.53063L10.5306 13.2806C10.461 13.3504 10.3783 13.4057 10.2872 13.4434C10.1962 13.4812 10.0986 13.5006 10 13.5006C9.90144 13.5006 9.80385 13.4812 9.7128 13.4434C9.62175 13.4057 9.53903 13.3504 9.46938 13.2806L5.71938 9.53063C5.57865 9.38989 5.49959 9.19902 5.49959 9C5.49959 8.80098 5.57865 8.61011 5.71938 8.46937C5.86011 8.32864 6.05098 8.24958 6.25 8.24958C6.44903 8.24958 6.6399 8.32864 6.78063 8.46937L10 11.6897L13.2194 8.46937C13.2891 8.39969 13.3718 8.34442 13.4628 8.3067C13.5539 8.26899 13.6515 8.24958 13.75 8.24958C13.8486 8.24958 13.9461 8.26899 14.0372 8.3067C14.1282 8.34442 14.2109 8.39969 14.2806 8.46937C14.3503 8.53906 14.4056 8.62178 14.4433 8.71283C14.481 8.80387 14.5004 8.90145 14.5004 9C14.5004 9.09855 14.481 9.19613 14.4433 9.28717C14.4056 9.37822 14.3503 9.46094 14.2806 9.53063Z"
+                              fill="#9F9F9F"
+                            />
+                          </svg>
+                        </div>
+                        <div class="pannel pannel-open">
+                          <p>
+                            - Chuyên gia lập trình website, ứng dụng di động;
+                            <br />
+                            - Chuyên gia kiểm thử phần mềm, phân tích nghiệp vụ,
+                            phân tích hệ thống; <br />
+                            - Chuyên gia lập trình cơ sở dữ liệu, mạng máy tinh;
+                            <br />
+                            - Chuyên gia quản trị mạng máy tính quản lý, điều
+                            hành trong lĩnh vực Công nghệ thông tin; <br />
+                            - Chuyên gia an ninh mạng, quản lý dữ liệu.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="faq--block">
+                        <div class="faq">
+                          <div class="accordion accordion-clicked">
+                            <div class="faq__heading">
+                              <h3>4.2</h3>
+                              <h3>
+                                Mức lương sinh viên có thể đạt được sau tốt
+                                nghiệp?
+                              </h3>
+                            </div>
+
+                            <svg
+                              class="faq__icon faq__icon--rotate"
+                              width="20"
+                              height="21"
+                              viewBox="0 0 20 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M10 0.75C8.07164 0.75 6.18657 1.32183 4.58319 2.39317C2.97982 3.46451 1.73013 4.98726 0.992179 6.76884C0.254225 8.55042 0.061142 10.5108 0.437348 12.4021C0.813554 14.2934 1.74215 16.0307 3.10571 17.3943C4.46928 18.7579 6.20656 19.6865 8.09787 20.0627C9.98919 20.4389 11.9496 20.2458 13.7312 19.5078C15.5127 18.7699 17.0355 17.5202 18.1068 15.9168C19.1782 14.3134 19.75 12.4284 19.75 10.5C19.7473 7.91498 18.7192 5.43661 16.8913 3.60872C15.0634 1.78084 12.585 0.75273 10 0.75ZM14.2806 9.53063L10.5306 13.2806C10.461 13.3504 10.3783 13.4057 10.2872 13.4434C10.1962 13.4812 10.0986 13.5006 10 13.5006C9.90144 13.5006 9.80385 13.4812 9.7128 13.4434C9.62175 13.4057 9.53903 13.3504 9.46938 13.2806L5.71938 9.53063C5.57865 9.38989 5.49959 9.19902 5.49959 9C5.49959 8.80098 5.57865 8.61011 5.71938 8.46937C5.86011 8.32864 6.05098 8.24958 6.25 8.24958C6.44903 8.24958 6.6399 8.32864 6.78063 8.46937L10 11.6897L13.2194 8.46937C13.2891 8.39969 13.3718 8.34442 13.4628 8.3067C13.5539 8.26899 13.6515 8.24958 13.75 8.24958C13.8486 8.24958 13.9461 8.26899 14.0372 8.3067C14.1282 8.34442 14.2109 8.39969 14.2806 8.46937C14.3503 8.53906 14.4056 8.62178 14.4433 8.71283C14.481 8.80387 14.5004 8.90145 14.5004 9C14.5004 9.09855 14.481 9.19613 14.4433 9.28717C14.4056 9.37822 14.3503 9.46094 14.2806 9.53063Z"
+                                fill="#9F9F9F"
+                              />
+                            </svg>
+                          </div>
+                          <div class="pannel pannel-open">
+                            <p>
+                              Mức lương sau khi tốt nghiệp lên đến >500 triệu
+                              VNĐ/năm. Ngoài ra SV gần như được cam kết việc làm
+                              sau khi tốt nghiệp Chương trình KS CNTT Việt Nhật.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -984,36 +971,53 @@ if ($_POST) {
                     font-family: Manrope;
                     color: #ffffff;
                     margin-bottom: 6px;
+                    line-height: 21.86px;
                   "
                 >
                   Học viện Công nghệ Bưu chính Viễn thông
                 </h3>
                 <h3>Trung tâm Đào tạo Quốc tế</h3>
               </div>
-              <p>
-                Chúng tôi tiên phong trong việc xây dựng và triển khai các
-                chương trình đào tạo hệ chất lượng cao.
-              </p>
             </div>
             <div class="footer__section">
               <p class="title">Liên kết nhanh</p>
               <ul>
                 <li>
+                  <img
+                    src="./assets/img/arrow-right-white.svg"
+                    alt=""
+                    class="show-on-mobile"
+                  />
                   <a href="https://portal.dtqt.edu.vn/" target="_blank"
                     >Cổng thông tin Học viện CNBCVT</a
                   >
                 </li>
                 <li>
+                  <img
+                    src="./assets/img/arrow-right-white.svg"
+                    alt=""
+                    class="show-on-mobile"
+                  />
                   <a href="https://cie.ptit.edu.vn/" target="_blank"
                     >Trang chủ Trung tâm ĐTQT</a
                   >
                 </li>
                 <li>
+                  <img
+                    src="./assets/img/arrow-right-white.svg"
+                    alt=""
+                    class="show-on-mobile"
+                  />
                   <a href="https://daotao.ptit.edu.vn/" target="_blank"
                     >Quản lý đào tạo</a
                   >
                 </li>
                 <li>
+                  <img
+                    src="./assets/img/arrow-right-white.svg"
+                    alt=""
+                    class="show-on-mobile"
+                  />
                   <a href="https://tuyensinh.dtqt.edu.vn/" target="_blank"
                     >Cổng thông tin tuyển sinh</a
                   >
@@ -1042,12 +1046,12 @@ if ($_POST) {
                 Tầng 5, Tòa nhà A1<br />96A Trần Phú, Quận Hà Đông, Hà Nội
               </p>
               <p class="address">
-                <img src="./assets/img/call.png" alt="địa chỉ" /> Liên lạc trực
+                <img src="./assets/img/call.svg" alt="địa chỉ" /> Liên lạc trực
                 tiếp
               </p>
               <p class="address1">088.616.0606</p>
               <p class="address">
-                <img src="./assets/img/sms.png" alt="địa chỉ" /> Hỗ trợ qua hòm
+                <img src="./assets/img/sms.svg" alt="địa chỉ" /> Hỗ trợ qua hòm
                 thư
               </p>
               <!-- <p class="address1">cie@ptit.edu.vn</p> -->
@@ -1074,16 +1078,34 @@ if ($_POST) {
                   />
                 </div>
                 <div class="form__submit show-email">
-                  <button type="submit" name="action" value="Submit Email">
-                    Đăng ký ngay
-                    <img src="./assets/img/arrow-right-white.svg" alt="" />
+                  <button
+                    type="submit"
+                    name="action"
+                    value="Submit Email"
+                    class="hide-on-mobile"
+                  >
+                    <p class="hide-on-mobile">Đăng ký ngay</p>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M13.2929 5.29289C13.6834 4.90237 14.3166 4.90237 14.7071 5.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L14.7071 18.7071C14.3166 19.0976 13.6834 19.0976 13.2929 18.7071C12.9024 18.3166 12.9024 17.6834 13.2929 17.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L13.2929 6.70711C12.9024 6.31658 12.9024 5.68342 13.2929 5.29289Z"
+                        fill="white"
+                      />
+                    </svg>
                   </button>
                 </div>
               </form>
-              <p class="address2">
+              <!-- <p class="address2">
                 <img src="./assets/img/hand.png" alt="mũi tên" /> Tất cả thông
                 tin bạn cung cấp được cam kết bảo mật
-              </p>
+              </p> -->
             </div>
           </div>
 
