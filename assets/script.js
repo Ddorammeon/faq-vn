@@ -44,6 +44,38 @@ mainques.forEach((quesHeading) => {
   });
 });
 
+// <!-- Dropdown language -->
+//get dropdown from document
+const languages = document.querySelectorAll(".dropdown");
+
+//loop through all dropdown elements
+languages.forEach((faq) => {
+  //get inner element from each dropdown
+  const select = faq.querySelector(".select");
+  const menu = faq.querySelector(".dropdown--list");
+  const options = faq.querySelectorAll(".dropdown--item");
+
+  //add a click event to the select element
+  select.addEventListener("click", () => {
+    //add the clicked select styles to the selected element
+    select.classList.toggle("select-clicked");
+    //add the clicked select styles to the selected element
+    menu.classList.toggle("dropdown--list-open");
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      selected.innerText = option.innerText;
+      select.classList.remove("select-clicked");
+      menu.classList.remove("dropdown--list-open");
+      options.forEach((option) => {
+        option.classList.remove("dropdown--item__active");
+      });
+      option.classList.add("dropdown--item__active");
+    });
+  });
+});
+
 /* form pop-up */
 document.addEventListener("DOMContentLoaded", (event) => {
   const section = document.querySelector(".form--popup"),
