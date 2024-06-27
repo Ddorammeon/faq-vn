@@ -595,7 +595,6 @@ a {
     align-items: center;
     gap: 12px;
     justify-content: center;
-    margin-bottom: 20px;
     border-bottom: 1px solid #FFFFFF;
 
 }
@@ -653,6 +652,10 @@ a {
     background: #fff;
     border-radius: 50%;
     padding: 2.5px;
+}
+
+.form__submit {
+    margin-top: 20px;
 }
 
 .form__submit svg path {
