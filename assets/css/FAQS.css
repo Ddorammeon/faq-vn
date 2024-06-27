@@ -602,6 +602,7 @@ a {
 
 .footer__section .input-group input:focus {
     outline: none;
+    background: transparent;
     /* Ensure focus outline is removed */
 }
 
@@ -671,10 +672,6 @@ input::placeholder {
     font-size: 14px;
     /* Kích thước chữ */
 
-}
-
-input:focus {
-    background-color: transparent;
 }
 
 .footer__section p {

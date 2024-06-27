@@ -144,3 +144,38 @@ function copyToClipboard(element, text) {
     notification.style.display = "none";
   }, 2000); // Hide the notification after 2 seconds
 }
+
+// footer--validate
+document.addEventListener("DOMContentLoaded", function () {
+  const emailInput = document.getElementById("user_email");
+  const submitBtn = document.getElementById("submitBtn");
+  const emailHelp = document.getElementById("emailHelp");
+
+  emailInput.addEventListener("input", function () {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailInput.value === "") {
+      emailHelp.textContent = "";
+      submitBtn.disabled = true;
+    } else if (!emailPattern.test(emailInput.value)) {
+      emailHelp.textContent = "Email không hợp lệ";
+      submitBtn.disabled = true;
+    } else {
+      emailHelp.textContent = "";
+      submitBtn.disabled = false;
+    }
+  });
+
+  document
+    .getElementById("emailForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!submitBtn.disabled && emailPattern.test(emailInput.value)) {
+        // Perform actions upon valid submission
+        console.log("Email submitted:", emailInput.value);
+      } else {
+        emailHelp.textContent = "Email không hợp lệ";
+      }
+    });
+});

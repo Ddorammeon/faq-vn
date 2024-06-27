@@ -886,6 +886,7 @@ if ($_POST) {
                     required
                   />
                 </div>
+                <span id="nameHelp" class="help-text"></span>
 
                 <div class="grouped-form">
                   <div class="input-box">
@@ -895,7 +896,6 @@ if ($_POST) {
                       id="email"
                       name="email"
                       placeholder="Nhập email của bạn"
-                      required
                     />
                   </div>
 
@@ -910,6 +910,7 @@ if ($_POST) {
                       required
                     />
                   </div>
+                  <span id="phoneHelp" class="help-text"></span>
                 </div>
 
                 <div class="input-box">
@@ -922,13 +923,16 @@ if ($_POST) {
                     required
                   />
                 </div>
+                <span id="contentHelp" class="help-text"></span>
               </div>
               <div class="form-submit show-modal">
                 <button
                   class="form--btn"
                   type="submit"
                   name="action"
+                  id="submitBtn"
                   value="Submit Info"
+                  disabled
                 >
                   <p>Gửi câu hỏi</p>
                   <img src="./assets/img/arrow-right.svg" alt="" />
@@ -1091,6 +1095,7 @@ if ($_POST) {
                   <input
                     type="email"
                     name="user_email"
+                    id="user_email"
                     placeholder="Email của bạn"
                     required
                   />
@@ -1098,9 +1103,11 @@ if ($_POST) {
                 <div class="form__submit show-email">
                   <button
                     type="submit"
+                    id="submitBtn"
                     name="action"
                     value="Submit Email"
                     class="hide-on-mobile"
+                    disabled
                   >
                     <p class="hide-on-mobile">Đăng ký ngay</p>
                     <svg
@@ -1120,6 +1127,8 @@ if ($_POST) {
                   </button>
                 </div>
               </form>
+              <span id="emailHelp" class="help-text"></span>
+
               <!-- <p class="address2">
                 <img src="./assets/img/hand.png" alt="mũi tên" /> Tất cả thông
                 tin bạn cung cấp được cam kết bảo mật
